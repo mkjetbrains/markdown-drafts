@@ -4,8 +4,6 @@
 
 This is an official [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) build agent image.
 
-<img src="https://raw.githubusercontent.com/JetBrains/teamcity-docker-images/master/logo/GitHub.png" height="20" align="center"/> More details about tags and components are [here](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md).
-
 The [TeamCity build agent](https://www.jetbrains.com/help/teamcity/build-agent.html) connects to the TeamCity server and spawns the actual build processes.
 You can use the ```jetbrains/teamcity-server``` image to run a TeamCity server.
 
@@ -14,6 +12,27 @@ This image adds a TeamCity agent suitable for Java development. It is based on `
 * client-side checkout if you use 'git' or 'mercurial'
 * more bundled build tools
 * 'docker-in-docker' on Linux
+
+## Supported tags
+
+- General (multi-architecture):
+  - `2020.1.1`
+  - `eap`
+  - `latest`
+- Linux:
+  - [`latest-18.04`, `2020.1.1-18.04`, `eap-18.04`, `latest-linux`, `2020.1.1-linux`, `eap-linux`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-1804-202011-1804-eap-1804-latest-linux-202011-linux-eap-linux)
+  - [`latest-18.04-sudo`, `2020.1.1-18.04-sudo`, `eap-18.04-sudo`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-1804-sudo-202011-1804-sudo-eap-1804-sudo)
+- Windows:
+  - [`latest-nanoserver-1809`, `2020.1.1-nanoserver-1809`, `eap-nanoserver-1809`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-nanoserver-1809-202011-nanoserver-1809-eap-nanoserver-1809)
+  - [`latest-nanoserver-1903`, `2020.1.1-nanoserver-1903`, `eap-nanoserver-1903`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-nanoserver-1903-202011-nanoserver-1903-eap-nanoserver-1903)
+  - [`latest-windowsservercore-1809`, `2020.1.1-windowsservercore-1809`, `eap-windowsservercore-1809`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-windowsservercore-1809-202011-windowsservercore-1809-eap-windowsservercore-1809)
+  - [`latest-windowsservercore-1903`, `2020.1.1-windowsservercore-1903`, `eap-windowsservercore-1903`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-windowsservercore-1903-202011-windowsservercore-1903-eap-windowsservercore-1903)
+  - [`latest-nanoserver-1803`, `2020.1.1-nanoserver-1803`, `eap-nanoserver-1803`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-nanoserver-1803-202011-nanoserver-1803-eap-nanoserver-1803)
+  - [`latest-nanoserver-1909`, `2020.1.1-nanoserver-1909`, `eap-nanoserver-1909`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-nanoserver-1909-202011-nanoserver-1909-eap-nanoserver-1909)
+  - [`latest-windowsservercore-1803`, `2020.1.1-windowsservercore-1803`, `eap-windowsservercore-1803`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-windowsservercore-1803-202011-windowsservercore-1803-eap-windowsservercore-1803)
+  - [`latest-windowsservercore-1909`, `2020.1.1-windowsservercore-1909`, `eap-windowsservercore-1909`](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md#latest-windowsservercore-1909-202011-windowsservercore-1909-eap-windowsservercore-1909)
+  
+More details about tags and components are available [here](https://github.com/JetBrains/teamcity-docker-images/blob/master/context/generated/teamcity-agent.md).
 
 ## How to Use This Image
 
