@@ -7,7 +7,7 @@ This is an official [JetBrains TeamCity](https://www.jetbrains.com/teamcity/) bu
 The [TeamCity build agent](https://www.jetbrains.com/help/teamcity/build-agent.html) connects to the TeamCity server and spawns the actual build processes.
 You can use the ```jetbrains/teamcity-server``` image to run a TeamCity server.
 
-This image adds a TeamCity agent suitable for Java development. It is based on ```jetbrains/teamcity-minimal-agent``` but gives you more benefits, e.g. 
+This image adds a TeamCity agent suitable for Java development. It is based on ```jetbrains/teamcity-minimal-agent``` but gives you more benefits, such as:
 
 * client-side checkout if you use 'git' or 'mercurial'
 * more bundled build tools
@@ -91,7 +91,7 @@ You can use other than `/opt/buildagent/` source path prefix on the host machine
 ### Running Builds Which Require Docker
 
 In a Linux container, if you need a Docker daemon available inside your builds, you have two options. 
-Regardless of the selected option, the container must be run under the root user (`-u 0`).
+Regardless of the selected option, the container must be run under the root user: you can either use the TeamCity agent image with the `linux-sudo` tag or pass `-u 0` if you run any other agent image.
 
 **NOTE:** both of these options require extra trust to your builds, as a build may get
 **root access** to the host where the teamcity agent container is running. 
@@ -130,7 +130,7 @@ docker run -it -e SERVER_URL="<url to TeamCity server>"  \
     jetbrains/teamcity-agent
 ```
 
-The option `-v docker_volumes:/var/lib/docker` is related to the case when the `aufs` filesystem is used and when a build agent is started from a Windows machine ([related issue](https://youtrack.jetbrains.com/issue/TW-52939)).
+The option `-v docker_volumes:/var/lib/docker` is related to the case when the `aufs` filesystem is used and when a build agent is started from a Windows machine ([related issue](https://youtrack.jetbrains.com/issue/TW-52939)).   
 If you want to start several build agents, you need to specify different volumes for them, like `-v agent1_volumes:/var/lib/docker`, `-v agent2_volumes:/var/lib/docker`.
 
 ### Windows Containers Limitations
