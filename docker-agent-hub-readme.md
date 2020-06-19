@@ -92,7 +92,7 @@ You can use other than `/opt/buildagent/` source path prefix on the host machine
 
 In a Linux container, if you need a Docker daemon available inside your builds, you have two options.
 
-Regardless of the selected option, the __Docker service inside the container must be started under the root user__. The TeamCity agent images with the `linux-sudo` tag allow using the sudo access, which is the recommended approach. Alternatively, if you run a non-sudo agent image, you can run the whole container under the root user by passing `-u 0`.
+Regardless of the selected option, the __Docker service inside the container must be started under the root user__. The recommended approach is to use the TeamCity agent `linux-sudo` image that provides the sudo access. Alternatively, if you use a non-sudo agent image, you can run the whole container under the root user by passing `-u 0`.
 
 Initially, the Docker is stopped inside the container. To run it, pass the `-e DOCKER_IN_DOCKER=start` environment variable.
 
